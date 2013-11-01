@@ -3,7 +3,6 @@
 
 #include "stdafx.h"
 #include "ValueList.h"
-#include "Median.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -13,7 +12,7 @@ void sampleFromFileToCout(string fileName);
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	ValueList randomList(10);
+	ValueList randomList(9);
 	randomList.printList();
 
 	ValueList fileList("input1.txt");
@@ -25,8 +24,4 @@ int _tmain(int argc, _TCHAR* argv[])
 	fileList.~ValueList();
 
 	return 0;
-}
-
-void FreeResources() {
-	
 }

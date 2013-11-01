@@ -35,7 +35,6 @@ ValueList::ValueList(string fileName){
 		cout << "Unable to open file"; 
 	}
 
-	//Test
 }
 
 ValueList::~ValueList(){

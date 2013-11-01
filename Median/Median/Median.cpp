@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 #include "ValueList.h"
-
+//bla
 int _tmain(int argc, _TCHAR* argv[])
 {
 	ValueList createValues(50);

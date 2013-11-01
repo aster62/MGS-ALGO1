@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 #include "ValueList.h"
-//bla
+
 int _tmain(int argc, _TCHAR* argv[])
 {
 	ValueList createValues(50);
@@ -18,8 +18,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	std::cin.get();
 
 	createValues.~ValueList();
-
-	//Testcommit
 
 	return 0;
 }

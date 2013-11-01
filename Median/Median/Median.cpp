@@ -19,6 +19,8 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	createValues.~ValueList();
 
+	//Testcommit
+
 	return 0;
 }
 

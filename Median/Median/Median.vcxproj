@@ -76,14 +76,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="input1.txt" />
+    <Text Include="input100.txt" />
+    <Text Include="input1000.txt" />
+    <Text Include="input10000.txt" />
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AlgoFactory.h" />
+    <ClInclude Include="Timer.h" />
     <ClInclude Include="ValueList.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AlgoFactory.cpp" />
+    <ClCompile Include="Timer.cpp" />
     <ClCompile Include="ValueList.cpp" />
     <ClCompile Include="Median.cpp" />
     <ClCompile Include="stdafx.cpp" />

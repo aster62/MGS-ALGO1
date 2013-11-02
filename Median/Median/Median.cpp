@@ -17,14 +17,17 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	AlgoFactory algoFactory;
 	Timer timer;
-	ValueList randomList(10);
+	ValueList randomList(11);
 	randomList.printList();
 	int *ranList = randomList.getValuesArr();
 
 	timer.start();
-	algoFactory.quicksort(ranList,ranList + 9);
+	//algoFactory.quicksort(ranList,ranList + 9); // nicht richtig
+	//int * last = algoFactory.quickSelect(ranList,ranList +11, ranList); //nicht richtig
+	//algoFactory.STLnth_element(ranList, ranList + 5, ranList + 11); // funktioniert
 	timer.stop();
 	randomList.printList();
+	//cout << "Median is: "<< *last  << "\n";
 	
 
 	//ValueList fileList("input100.txt");

@@ -1,5 +1,5 @@
 #include "stdafx.h"
-
+#include <algorithm>
 class AlgoFactory
 {
 public:
@@ -8,8 +8,9 @@ public:
 
 	void quicksort(int*, int*);
 	int randomizedSelect(int*, int, int, int);
-	void medianLit(int*);
-	void STLnth_element(int*);
+	int* quickSelect(int*, int*,int*);
+	void STLnth_element(int*, int*, int*);
 private:
+	int* partition(int*,int*);
 
 };

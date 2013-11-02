@@ -7,27 +7,33 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "AlgoFactory.h"
+
 using namespace std;
 
 void sampleFromFileToCout(string fileName);
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-
+	AlgoFactory algoFactory;
 	Timer timer;
+	ValueList randomList(10);
+	randomList.printList();
+	int *ranList = randomList.getValuesArr();
 
 	timer.start();
-
-	ValueList randomList(9);
+	algoFactory.quicksort(ranList,ranList + 9);
+	timer.stop();
 	randomList.printList();
+	
 
-	ValueList fileList("input1.txt");
-	fileList.printList();
+	//ValueList fileList("input100.txt");
+	//fileList.printList();
 
 	randomList.~ValueList();
-	fileList.~ValueList();
+	//fileList.~ValueList();
 
-	timer.stop();
+	
 	
 	cout << "Total time elapsed: " << timer.getElapsedTimeInMilliSec() << " (ms)";
 

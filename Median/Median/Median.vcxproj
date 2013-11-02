@@ -76,7 +76,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="input1.txt" />
     <Text Include="input100.txt" />
     <Text Include="input1000.txt" />
     <Text Include="input10000.txt" />

@@ -9,21 +9,32 @@ void sampleFromFileToCout(string fileName);
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+
+	int listSize = 1000000;
+
 	AlgoFactory algoFactory;
 	Timer timer;
 
-
-	ValueList randomList(1000000);
+	ValueList randomList(listSize);
 	int* ranList = randomList.getValuesArr();
 
+	timer.start();
 	NthElementAlgorithm nth;
-	BaseAlgorithm * baseNth = &nth;
+	cout << "Nth Element: \n";
+	nth.execute(ranList, ranList + listSize/2, ranList + listSize);
+	timer.stop();
+	cout << "Median: " << *(ranList+listSize/2) << "\n";
+	cout << "Time: " << timer.getElapsedTimeInMilliSec() << " (ms) \n\n";
+	
+	randomList.shuffleValueArr();
 
 	timer.start();
-	nth.execute(ranList, ranList + 500000, ranList + 1000000);
+	cout << "Randomized Select: \n";
+	RandomizedSelectAlgorithm rsa;
+	int rsaMedian = rsa.getMedian(ranList, 0, listSize-1, (listSize/2)+1);
 	timer.stop();
-	cout << "Nth Element: " << timer.getElapsedTimeInMilliSec() << " (ms) \n";
-
+	cout << "Median: " << rsaMedian << "\n";
+	cout << "RandomizedSelectAlgorithm " << timer.getElapsedTimeInMilliSec() << " (ms) \n";
 
 	//algoFactory.quicksort(ranList,ranList + 9); // nicht richtig
 	//int * last = algoFactory.quickSelect(ranList,ranList +11, ranList); //nicht richtig

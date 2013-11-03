@@ -65,3 +65,7 @@ void ValueList::printList(){
 	}
 	cout << "\n";
 }
+
+int ValueList::getListSize(){
+	return quantity;
+}

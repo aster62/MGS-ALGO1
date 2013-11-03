@@ -18,5 +18,5 @@ private:
 	int  quantity;
 	int* testValues;
 	void fillValueArr();
-	
+	int getListSize();
 };

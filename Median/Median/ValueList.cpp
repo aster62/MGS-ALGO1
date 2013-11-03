@@ -1,4 +1,4 @@
-#include "ValueList.h"
+#include "stdafx.h"
 using namespace std;
 
 ValueList::ValueList(int quantity){

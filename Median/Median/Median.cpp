@@ -2,12 +2,6 @@
 //
 
 #include "stdafx.h"
-#include "ValueList.h"
-#include "Timer.h"
-#include <iostream>
-#include <fstream>
-#include <string>
-#include "AlgoFactory.h"
 
 using namespace std;
 
@@ -21,6 +15,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	randomList.printList();
 	int *ranList = randomList.getValuesArr();
 
+	NthElementAlgorithm nth;
+	BaseAlgorithm * baseNth = &nth;
+
+	cout << "getInt: " << baseNth->getInt() << "\n";
+	cout << "findMedian: " << baseNth->findMedian() << "\n";
+
 	timer.start();
 	//algoFactory.quicksort(ranList,ranList + 9); // nicht richtig
 	//int * last = algoFactory.quickSelect(ranList,ranList +11, ranList); //nicht richtig
@@ -31,14 +31,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	
 
 	//ValueList fileList("input100.txt");
-	//fileList.printList();
-
-	randomList.~ValueList();
-	//fileList.~ValueList();
-
+	//fileList.printList();	
 	
-	
-	cout << "Total time elapsed: " << timer.getElapsedTimeInMilliSec() << " (ms)";
+	cout << "Total time elapsed: " << timer.getElapsedTimeInMilliSec() << " (ms) \n";
 
 	cin.get();
 

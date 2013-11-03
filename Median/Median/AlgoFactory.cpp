@@ -1,4 +1,4 @@
-#include "AlgoFactory.h"
+#include "stdafx.h"
 using namespace std;
 
 AlgoFactory::AlgoFactory(){

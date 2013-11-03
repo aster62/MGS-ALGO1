@@ -83,6 +83,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AlgoFactory.h" />
+    <ClInclude Include="NthElementAlgorithm.h" />
+    <ClInclude Include="BaseAlgorithm.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="ValueList.h" />
     <ClInclude Include="stdafx.h" />
@@ -90,6 +92,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AlgoFactory.cpp" />
+    <ClCompile Include="NthElementAlgorithm.cpp" />
+    <ClCompile Include="BaseAlgorithm.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="ValueList.cpp" />
     <ClCompile Include="Median.cpp" />

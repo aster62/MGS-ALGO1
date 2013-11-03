@@ -6,7 +6,17 @@
 #pragma once
 
 #include "targetver.h"
+#include "BaseAlgorithm.h"
+#include "NthElementAlgorithm.h"
+#include "AlgoFactory.h"
+#include "ValueList.h"
+#include "Timer.h"
 
+#include <iostream>
+#include <fstream>
+#include <string>
+
+#include <stdlib.h>
 #include <stdio.h>
 #include <tchar.h>
 

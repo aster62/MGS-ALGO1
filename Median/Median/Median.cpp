@@ -43,20 +43,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//randomList.printList();
 	//cout << "Median is: "<< *last  << "\n";
 	
-	
-	
 	//randomList.printList();
 
 	//ValueList fileList("input100.txt");
 	//fileList.printList();	
-	
-	
 
 	cin.get();
-
-	
-
-	
 
 	return 0;
 }

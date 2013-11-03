@@ -11,29 +11,35 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	AlgoFactory algoFactory;
 	Timer timer;
-	ValueList randomList(11);
-	randomList.printList();
-	int *ranList = randomList.getValuesArr();
+
+
+	ValueList randomList(1000000);
+	int* ranList = randomList.getValuesArr();
 
 	NthElementAlgorithm nth;
 	BaseAlgorithm * baseNth = &nth;
 
-	cout << "getInt: " << baseNth->getInt() << "\n";
-	cout << "findMedian: " << baseNth->findMedian() << "\n";
-
 	timer.start();
+	nth.execute(ranList, ranList + 500000, ranList + 1000000);
+	timer.stop();
+	cout << "Nth Element: " << timer.getElapsedTimeInMilliSec() << " (ms) \n";
+
+
 	//algoFactory.quicksort(ranList,ranList + 9); // nicht richtig
 	//int * last = algoFactory.quickSelect(ranList,ranList +11, ranList); //nicht richtig
 	//algoFactory.STLnth_element(ranList, ranList + 5, ranList + 11); // funktioniert
-	timer.stop();
-	randomList.printList();
+	
+	//randomList.printList();
 	//cout << "Median is: "<< *last  << "\n";
 	
+	
+	
+	//randomList.printList();
 
 	//ValueList fileList("input100.txt");
 	//fileList.printList();	
 	
-	cout << "Total time elapsed: " << timer.getElapsedTimeInMilliSec() << " (ms) \n";
+	
 
 	cin.get();
 

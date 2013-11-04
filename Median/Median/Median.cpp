@@ -5,18 +5,41 @@
 
 using namespace std;
 
-void sampleFromFileToCout(string fileName);
+void printUsage();
+void printUsage(string);
 
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char* argv[])
 {
+	ValueList valueList;
 
-	int listSize = 1000000;
+	for(int i = 1; i < argc; i++) {
+		if ( (strcmp(argv[i], "--load") == 0) && (i+1 < argc)){
+			valueList.initializeList(argv[i+1]);
+			i++;
+		} 
+		else if ( (strcmp(argv[i], "--random") == 0) && (i+1 < argc))
+		{
+			valueList.initializeList(stoi(argv[i+1]));
+			i++;
+		}
+		else
+		{
+			printUsage();
+			return -1;
+		}
+	}
+
+	int listSize = valueList.getListSize();
+
+	if(listSize < 1){
+		printUsage("Missing argument.");
+		return -1;
+	}
 
 	AlgoFactory algoFactory;
 	Timer timer;
 
-	ValueList randomList(listSize);
-	int* ranList = randomList.getValuesArr();
+	int* ranList = valueList.getValuesArr();
 
 	timer.start();
 	NthElementAlgorithm nth;
@@ -26,7 +49,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	cout << "Median: " << *(ranList+listSize/2) << "\n";
 	cout << "Time: " << timer.getElapsedTimeInMilliSec() << " (ms) \n\n";
 	
-	randomList.shuffleValueArr();
+	valueList.shuffleValueArr();
 
 	timer.start();
 	cout << "Randomized Select: \n";
@@ -51,4 +74,19 @@ int _tmain(int argc, _TCHAR* argv[])
 	cin.get();
 
 	return 0;
+}
+
+void printUsage(string message){
+
+	if (!message.empty()){
+		cout << "Error: " << message << "\n";
+	}
+	cout << "USAGE: Median [--load <inputFile>, --random <listSize>] \n";
+	cout << "<ENTER> to exit the program. \n";
+	cin.get();
+}
+
+void printUsage() {
+
+	printUsage("");
 }

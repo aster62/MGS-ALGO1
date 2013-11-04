@@ -8,17 +8,19 @@
 class ValueList
 {
 public:
+		 ValueList();
 		 ValueList(std::string);
 		 ValueList(int);
 		 ~ValueList();
 	int* getValuesArr();
 	void shuffleValueArr();
 	void printList();
-	void initializeList(string);
+	void initializeList(std::string);
 	void initializeList(int);
+	int  getListSize();
 private:
 	int  quantity;
 	int* testValues;
 	void fillValueArr();
-	int getListSize();
+	
 };

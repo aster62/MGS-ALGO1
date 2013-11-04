@@ -129,3 +129,21 @@ double Timer::getElapsedTime()
 {
     return this->getElapsedTimeInSec();
 }
+
+void Timer::printElapsedTimeFormatted(){
+
+	int hours = 0;
+	int minutes = 0;
+	int seconds;
+	int milliSeconds;
+
+	hours = static_cast<int>(getElapsedTimeInMilliSec() / 3600000);
+	minutes = static_cast<int>(getElapsedTimeInMilliSec() / 60000);
+	minutes = minutes % 60;
+	seconds = static_cast<int>(getElapsedTimeInMilliSec() * 0.001);
+	seconds = seconds % 60;
+	milliSeconds = static_cast<int>(getElapsedTimeInMilliSec());
+	milliSeconds = milliSeconds % 1000;
+
+	fprintf(stdout, "%02i:%02i:%02i.%03i; ", hours, minutes,seconds,milliSeconds);
+}

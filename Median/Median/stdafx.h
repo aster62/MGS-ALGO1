@@ -19,6 +19,7 @@
 #include <fstream>
 #include <string>
 #include <algorithm>
+#include <sstream>
 
 #include <stdlib.h>
 #include <stdio.h>

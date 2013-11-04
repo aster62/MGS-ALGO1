@@ -79,18 +79,6 @@ int main(int argc, char* argv[])
 	cout << "Median: " << quickSelectMedian << "\n";
 	cout << "Time: " << timer.getElapsedTimeInMilliSec() << " (ms) \n\n";
 
-	//algoFactory.quicksort(ranList,ranList + 9); // nicht richtig
-	//int * last = algoFactory.quickSelect(ranList,ranList +11, ranList); //nicht richtig
-	//algoFactory.STLnth_element(ranList, ranList + 5, ranList + 11); // funktioniert
-	
-	//randomList.printList();
-	//cout << "Median is: "<< *last  << "\n";
-	
-	//randomList.printList();
-
-	//ValueList fileList("input100.txt");
-	//fileList.printList();	
-
 	cin.get();
 
 	return 0;

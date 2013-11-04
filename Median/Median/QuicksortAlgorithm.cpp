@@ -1,7 +1,8 @@
 #include "stdafx.h"
 
 void QuicksortAlgorithm::quickSort(int arr[], int left, int right) {
-      int i = left, j = right;
+	
+	int i = left, j = right;
       int tmp;
       int pivot = arr[(left + right) / 2];
  

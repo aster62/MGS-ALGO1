@@ -1,6 +1,8 @@
-// Median.cpp : Definiert den Einstiegspunkt für die Konsolenanwendung.
+// Median.cpp : Defines the entry point of the program
+// Takes two arguments: --load <fileName> loads a file containing random numbers.
+// --random <int> generates a list of random numbers with size x.
+// Executes defined algorithms and returns both the resulted median and the execution time.
 //
-
 #include "stdafx.h"
 
 using namespace std;
@@ -11,6 +13,8 @@ void printUsage(string);
 int main(int argc, char* argv[])
 {
 	ValueList valueList;
+
+	// Process the command line arguments
 
 	for(int i = 1; i < argc; i++) {
 		if ( (strcmp(argv[i], "--load") == 0) && (i+1 < argc)){
@@ -40,6 +44,8 @@ int main(int argc, char* argv[])
 
 	int* ranList = valueList.getValuesArr();
 
+	// Execute and measure Nth-Element Algorithm
+
 	timer.start();
 	NthElementAlgorithm nth;
 	cout << "Nth Element: \n";
@@ -49,6 +55,8 @@ int main(int argc, char* argv[])
 	cout << "Time: " << timer.getElapsedTimeInMilliSec() << " (ms) \n\n";
 	
 	valueList.shuffleValueArr();
+
+	// Execute and measure Randomized-Select Algorithm
 
 	timer.start();
 	cout << "Randomized Select: \n";
@@ -60,6 +68,8 @@ int main(int argc, char* argv[])
 
 	valueList.shuffleValueArr();
 
+	// Execute and measure Quicksort Algorithm
+
 	timer.start();
 	cout << "QuickSort + Median: \n";
 	QuicksortAlgorithm quickSort;
@@ -69,6 +79,8 @@ int main(int argc, char* argv[])
 	cout << "Time: " << timer.getElapsedTimeInMilliSec() << " (ms) \n\n";
 
 	valueList.shuffleValueArr();
+
+	// Execute and measure Quickselect Algorithm
 
 	timer.start();
 	cout << "QuickSelect: \n";
@@ -83,6 +95,7 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
+// Prints a usage text and an additional error message.
 void printUsage(string message){
 
 	if (!message.empty()){
@@ -93,6 +106,7 @@ void printUsage(string message){
 	cin.get();
 }
 
+// Prints a usage text.
 void printUsage() {
 
 	printUsage("");

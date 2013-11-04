@@ -1,6 +1,8 @@
 #include "stdafx.h"
 using namespace std;
 
+// Chooses a random pivot element and positions all smaller values to the left and all larger values 
+// to the right of the pivot element
 int RandomizedSelectAlgorithm::random_partition(int* valueList, int left, int right)
 {
     int pivotIndex = left + rand() % (right-left+1);
@@ -33,7 +35,8 @@ int RandomizedSelectAlgorithm::random_partition(int* valueList, int left, int ri
 
     return i+1;
 }
- 
+
+// Recursive implementation of the randomized-select algorithm
 int RandomizedSelectAlgorithm::random_selection(int* valueList, int left, int right, int k)
 {
     if(left == right)

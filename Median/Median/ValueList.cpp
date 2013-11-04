@@ -11,12 +11,14 @@ ValueList::ValueList(string fileName){
 	initializeList(fileName);
 }
 
+// Initializes a list with a given size
 void ValueList::initializeList(int quantity){
 	this->quantity = quantity;
 	fillValueArr();
 	shuffleValueArr();
 }
 
+// Reads the size of the list and the numbers from a given file
 void ValueList::initializeList(string fileName){
 	quantity = 0;
 
@@ -51,23 +53,26 @@ ValueList::~ValueList(){
 	testValues = NULL;
 }
 
+// Fills the initialized Array with random numbers
 void ValueList::fillValueArr(){
 	testValues = new int[quantity];
 	srand (time(NULL));
 	for(int i = 0; i < quantity; i++){
 		testValues[i] = rand() % quantity +1;
-		//testValues[i] = rand() % quantity;
 	}
 }
 
+// Simple implementation of a random shuffle on the ValueList array
 void ValueList::shuffleValueArr(){
 	std::random_shuffle(&testValues[0],&testValues[quantity]);
 }
 
+// Returns the pointer to the array
 int* ValueList::getValuesArr(){
 	return testValues;
 }
 
+// Prints the contents of the array
 void ValueList::printList(){
 	for(int i = 0; i<quantity;i++){
 		cout << testValues[i] << "; ";

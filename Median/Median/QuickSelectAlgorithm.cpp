@@ -1,5 +1,7 @@
 #include "stdafx.h"
 
+// Chooses a predefined pivot element and positions all smaller values to the left and all larger values 
+// to the right of the pivot element
 int QuickSelectAlgorithm::partition(int* valueList, int left, int right)
 {
     int pivotElement = valueList[right];
@@ -23,6 +25,7 @@ int QuickSelectAlgorithm::partition(int* valueList, int left, int right)
     return right;
 }
 
+// Recursive implementation of the quickselect algorithm
 int QuickSelectAlgorithm::getMedian(int* valueList, int left, int right, int k)
 {
     if ( left == right ){

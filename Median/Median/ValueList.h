@@ -19,6 +19,7 @@ public:
 	void initializeList(int);			// Initializes the array with x elements
 	int  getListSize();					// Returns the maximum bound of the array
 	void fillValueArr();				// Fills the array with random elements
+	void ValueList::freeResources();
 private:
 	int  quantity;						// Number of elements max. stored in the array
 	int* testValues;					// int array for the testValues

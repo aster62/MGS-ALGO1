@@ -51,8 +51,6 @@ void ValueList::initializeList(string fileName){
 
 ValueList::~ValueList(){
 
-	delete testValues;
-	testValues = NULL;
 }
 
 // Fills the initialized Array with random numbers
@@ -84,4 +82,9 @@ void ValueList::printList(){
 
 int ValueList::getListSize(){
 	return quantity;
+}
+
+void ValueList::freeResources(){
+	delete testValues;
+	testValues = NULL;
 }

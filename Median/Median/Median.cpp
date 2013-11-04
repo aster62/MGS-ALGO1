@@ -90,7 +90,7 @@ int main(int argc, char* argv[])
 	cout << "Median: " << quickSelectMedian << "\n";
 	cout << "Time: " << timer.getElapsedTimeInMilliSec() << " (ms) \n\n";
 
-	cin.get();
+	valueList.freeResources();
 
 	return 0;
 }

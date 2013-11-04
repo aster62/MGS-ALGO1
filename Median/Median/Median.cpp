@@ -92,6 +92,9 @@ int main(int argc, char* argv[])
 
 	valueList.freeResources();
 
+	cout << "<ENTER> to exit the program. \n";
+	cin.get();
+
 	return 0;
 }
 
@@ -101,7 +104,7 @@ void printUsage(string message){
 	if (!message.empty()){
 		cout << "Error: " << message << "\n";
 	}
-	cout << "USAGE: Median [--load <inputFile>, --random <listSize>] \n";
+	cout << "USAGE: Median [--load <inputFile>], [--random <listSize>] \n";
 	cout << "<ENTER> to exit the program. \n";
 	cin.get();
 }

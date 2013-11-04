@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
 
 	int listSize = valueList.getListSize();
 
-	if(listSize < 1){
+	if(listSize == -1){
 		printUsage("Missing argument.");
 		return -1;
 	}

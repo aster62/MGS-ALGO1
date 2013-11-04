@@ -1,7 +1,9 @@
 #include "stdafx.h"
 using namespace std;
 
-ValueList::ValueList(){}
+ValueList::ValueList(){
+	quantity = -1;
+}
 
 ValueList::ValueList(int quantity){
 	initializeList(quantity);

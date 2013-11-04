@@ -57,7 +57,17 @@ int main(int argc, char* argv[])
 	int rsaMedian = rsa.getMedian(ranList, 0, listSize-1, (listSize/2)+1);
 	timer.stop();
 	cout << "Median: " << rsaMedian << "\n";
-	cout << "RandomizedSelectAlgorithm " << timer.getElapsedTimeInMilliSec() << " (ms) \n";
+	cout << "Time: " << timer.getElapsedTimeInMilliSec() << " (ms) \n\n";
+
+	valueList.shuffleValueArr();
+
+	timer.start();
+	cout << "QuickSort + Median: \n";
+	QuicksortAlgorithm quickSort;
+	int qs = quickSort.getMedian(ranList, 0, listSize);
+	timer.stop();
+	cout << "Median: " << rsaMedian << "\n";
+	cout << "Time: " << timer.getElapsedTimeInMilliSec() << " (ms) \n\n";
 
 	//algoFactory.quicksort(ranList,ranList + 9); // nicht richtig
 	//int * last = algoFactory.quickSelect(ranList,ranList +11, ranList); //nicht richtig

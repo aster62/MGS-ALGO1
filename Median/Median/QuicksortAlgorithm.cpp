@@ -1,35 +1,39 @@
 #include "stdafx.h"
 
-void QuicksortAlgorithm::quickSort(int arr[], int left, int right) {
+void QuicksortAlgorithm::quickSort(int* valueList , int left, int right) {
 	
-	int i = left, j = right;
-      int tmp;
-      int pivot = arr[(left + right) / 2];
+	int i = left;
+	int j = right;
+	int temp;
+    
+    int pivotElement = valueList[(left + right) / 2];
  
-      /* partition */
-      while (i <= j) {
-            while (arr[i] < pivot)
-                  i++;
-            while (arr[j] > pivot)
-                  j--;
-            if (i <= j) {
-                  tmp = arr[i];
-                  arr[i] = arr[j];
-                  arr[j] = tmp;
-                  i++;
-                  j--;
-            }
-      };
+    while (i <= j) {
+        while (valueList[i] < pivotElement){
+                i++;
+		}
+        while (valueList[j] > pivotElement){
+                j--;
+		}
+        if (i <= j) {
+            temp = valueList[i];
+            valueList[i] = valueList[j];
+            valueList[j] = temp;
+            i++;
+            j--;
+        }
+    };
+
+
  
-      /* recursion */
-      if (left < j)
-            quickSort(arr, left, j);
-      if (i < right)
-            quickSort(arr, i, right);
+    if (left < j)
+        quickSort(valueList, left, j);
+    if (i < right)
+        quickSort(valueList, i, right);
 }
 
-int QuicksortAlgorithm::getMedian(int* arr, int left, int right){
-	quickSort(arr, left, right);
-	return arr[(right-left)/2];
+int QuicksortAlgorithm::getMedian(int* valueList, int left, int right){
+	quickSort(valueList, left, right);
+	return valueList[(right-left)/2];
 
 }

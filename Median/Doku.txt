@@ -1,0 +1,12 @@
+Quicksort:
+	average case: o(n log n) 
+	worst case: 0(n²)
+Randomized Select:
+	average case: o(n)
+	worst case: o(n²)
+quick Select:
+	average case: o(n)
+	worst case: o(n²)
+nth Element:
+	 average case: O(n)  
+	 worst case: O(n²) 

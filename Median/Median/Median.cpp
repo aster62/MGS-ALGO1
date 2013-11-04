@@ -64,9 +64,19 @@ int main(int argc, char* argv[])
 	timer.start();
 	cout << "QuickSort + Median: \n";
 	QuicksortAlgorithm quickSort;
-	int qs = quickSort.getMedian(ranList, 0, listSize);
+	int quickSortMedian = quickSort.getMedian(ranList, 0, listSize-1);
 	timer.stop();
-	cout << "Median: " << rsaMedian << "\n";
+	cout << "Median: " << quickSortMedian << "\n";
+	cout << "Time: " << timer.getElapsedTimeInMilliSec() << " (ms) \n\n";
+
+	valueList.shuffleValueArr();
+
+	timer.start();
+	cout << "QuickSelect: \n";
+	QuickSelectAlgorithm quickSelect;
+	int quickSelectMedian = quickSelect.getMedian(ranList, 0, listSize-1, (listSize/2)+1);
+	timer.stop();
+	cout << "Median: " << quickSelectMedian << "\n";
 	cout << "Time: " << timer.getElapsedTimeInMilliSec() << " (ms) \n\n";
 
 	//algoFactory.quicksort(ranList,ranList + 9); // nicht richtig

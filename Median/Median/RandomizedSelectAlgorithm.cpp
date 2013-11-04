@@ -53,6 +53,6 @@ int RandomizedSelectAlgorithm::random_selection(int* valueList, int left, int ri
     }
 }
 
-int RandomizedSelectAlgorithm::getMedian(int* arr, int left, int right, int k){
-	return random_selection(arr, left, right, k);
+int RandomizedSelectAlgorithm::getMedian(int* valueList, int left, int right, int k){
+	return random_selection(valueList, left, right, k);
 }

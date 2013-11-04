@@ -73,7 +73,7 @@ int main(int argc, char* argv[])
 	timer.start();
 	cout << "QuickSelect: \n";
 	QuickSelectAlgorithm quickSelect;
-	int quickSelectMedian = quickSelect.getMedian(ranList, 0, listSize-1, (listSize/2)+1);
+	int quickSelectMedian = quickSelect.getMedian(ranList, 0, listSize-1, ((listSize)/2)+1);
 	timer.stop();
 	cout << "Median: " << quickSelectMedian << "\n";
 	cout << "Time: " << timer.getElapsedTimeInMilliSec() << " (ms) \n\n";

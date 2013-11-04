@@ -53,8 +53,9 @@ ValueList::~ValueList(){
 
 void ValueList::fillValueArr(){
 	testValues = new int[quantity];
+	srand (time(NULL));
 	for(int i = 0; i < quantity; i++){
-		testValues[i] = i ;
+		testValues[i] = rand() % quantity +1;
 		//testValues[i] = rand() % quantity;
 	}
 }

@@ -11,7 +11,6 @@
 #include "QuickSelectAlgorithm.h"
 #include "QuicksortAlgorithm.h"
 #include "RandomizedSelectAlgorithm.h"
-#include "AlgoFactory.h"
 #include "ValueList.h"
 #include "Timer.h"
 

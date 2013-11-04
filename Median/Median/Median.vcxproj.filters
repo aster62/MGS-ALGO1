@@ -39,9 +39,6 @@
     <ClInclude Include="Timer.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="AlgoFactory.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="BaseAlgorithm.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -69,9 +66,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Timer.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="AlgoFactory.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="BaseAlgorithm.cpp">

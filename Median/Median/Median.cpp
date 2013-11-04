@@ -36,7 +36,6 @@ int main(int argc, char* argv[])
 		return -1;
 	}
 
-	AlgoFactory algoFactory;
 	Timer timer;
 
 	int* ranList = valueList.getValuesArr();

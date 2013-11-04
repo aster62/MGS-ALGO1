@@ -82,7 +82,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AlgoFactory.h" />
     <ClInclude Include="NthElementAlgorithm.h" />
     <ClInclude Include="BaseAlgorithm.h" />
     <ClInclude Include="QuickSelectAlgorithm.h" />
@@ -94,7 +93,6 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AlgoFactory.cpp" />
     <ClCompile Include="NthElementAlgorithm.cpp" />
     <ClCompile Include="BaseAlgorithm.cpp" />
     <ClCompile Include="QuickSelectAlgorithm.cpp" />

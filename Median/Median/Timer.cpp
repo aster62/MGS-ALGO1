@@ -130,7 +130,7 @@ double Timer::getElapsedTime()
     return this->getElapsedTimeInSec();
 }
 
-void Timer::printElapsedTimeFormatted(){
+std::string Timer::getElapsedTimeFormatted(){
 
 	int hours = 0;
 	int minutes = 0;
@@ -145,5 +145,9 @@ void Timer::printElapsedTimeFormatted(){
 	milliSeconds = static_cast<int>(getElapsedTimeInMilliSec());
 	milliSeconds = milliSeconds % 1000;
 
-	fprintf(stdout, "%02i:%02i:%02i.%03i; ", hours, minutes,seconds,milliSeconds);
+	char buff[100];
+	sprintf(buff, "%02i:%02i:%02i.%03i; ", hours, minutes,seconds,milliSeconds);
+	std::string buffAsStdStr = buff;
+
+	return buffAsStdStr;
 }

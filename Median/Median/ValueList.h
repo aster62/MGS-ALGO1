@@ -14,6 +14,8 @@ public:
 	int* getValuesArr();
 	void shuffleValueArr();
 	void printList();
+	void initializeList(string);
+	void initializeList(int);
 private:
 	int  quantity;
 	int* testValues;

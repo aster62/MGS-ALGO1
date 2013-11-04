@@ -1,14 +1,23 @@
 #include "stdafx.h"
 using namespace std;
 
+ValueList::ValueList(){}
+
 ValueList::ValueList(int quantity){
+	initializeList(quantity);
+}
+
+ValueList::ValueList(string fileName){
+	initializeList(fileName);
+}
+
+void ValueList::initializeList(int quantity){
 	this->quantity = quantity;
 	fillValueArr();
 	shuffleValueArr();
 }
 
-ValueList::ValueList(string fileName){
-	
+void ValueList::initializeList(string fileName){
 	quantity = 0;
 
 	int valueCounter = 0;
@@ -34,7 +43,6 @@ ValueList::ValueList(string fileName){
 	else {
 		cout << "Unable to open file"; 
 	}
-
 }
 
 ValueList::~ValueList(){

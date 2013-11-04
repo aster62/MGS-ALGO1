@@ -24,8 +24,6 @@ void QuicksortAlgorithm::quickSort(int* valueList , int left, int right) {
         }
     };
 
-
- 
     if (left < j)
         quickSort(valueList, left, j);
     if (i < right)

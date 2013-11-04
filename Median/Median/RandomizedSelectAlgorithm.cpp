@@ -3,21 +3,21 @@ using namespace std;
 
 int RandomizedSelectAlgorithm::random_partition(int* valueList, int left, int right)
 {
-    int pivotElement = left + rand() % (right-left+1);
-    int pivot = valueList[pivotElement];
+    int pivotIndex = left + rand() % (right-left+1);
+    int pivotElement = valueList[pivotIndex];
 
 	int temp;
 
-	temp = valueList[pivotElement];
-	valueList[pivotElement] = valueList[right];
+	temp = valueList[pivotIndex];
+	valueList[pivotIndex] = valueList[right];
 	valueList[right] = temp;
 
-    pivotElement = right;
+    pivotIndex = right;
     int i = left -1;
  
     for(int j=left; j<=right-1; j++)
     {
-        if(valueList[j] <= pivot)
+        if(valueList[j] <= pivotElement)
         {
             i = i+1;
 
@@ -28,8 +28,8 @@ int RandomizedSelectAlgorithm::random_partition(int* valueList, int left, int ri
     }
 
 	temp = valueList[i+1];
-	valueList[i+1] = valueList[pivotElement];
-	valueList[pivotElement] = temp;
+	valueList[i+1] = valueList[pivotIndex];
+	valueList[pivotIndex] = temp;
 
     return i+1;
 }

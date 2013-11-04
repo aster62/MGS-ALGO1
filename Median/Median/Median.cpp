@@ -44,9 +44,9 @@ int main(int argc, char* argv[])
 	timer.start();
 	NthElementAlgorithm nth;
 	cout << "Nth Element: \n";
-	nth.execute(ranList, ranList + listSize/2, ranList + listSize);
+	int nthMedian = nth.getMedian(ranList, ranList + listSize/2, ranList + listSize);
 	timer.stop();
-	cout << "Median: " << *(ranList+listSize/2) << "\n";
+	cout << "Median: " << nthMedian << "\n";
 	cout << "Time: " << timer.getElapsedTimeInMilliSec() << " (ms) \n\n";
 	
 	valueList.shuffleValueArr();
